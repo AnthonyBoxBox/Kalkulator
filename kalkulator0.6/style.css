@@ -1,17 +1,16 @@
 
-
 *, *::after, *::before{
   box-sizing: border-box;
   font-family:sans-serif;
   font-size: 20px;
   font-weight: 450;
-  color: rgb(133, 43, 58);
+  color: rgb(0, 0, 0);
 }
 
 body {
   padding: 0px;
   margin:0px;
-  background-color: rgb(164, 123, 123);
+  background-color: rgb(123, 164, 128);
 
 
 }
@@ -24,9 +23,9 @@ body {
   grid-template-rows: minmax(120px, auto) repeat(4, 80px);
 }
 .wynik{
-  background-color: rgb(249, 154, 176);
+  background-color: rgb(108, 255, 110);
   grid-column: 1 / -1 ;
-  border: 1px solid rgb(133, 43, 58);
+  border: 1px solid rgb(43, 133, 55);
   padding: 20px;
   word-wrap: break-word;
   word-break: break-all;
@@ -41,7 +40,7 @@ body {
 .poprzednie-dzialanie{
   font-size: 16px;
   font-weight: 400;
-  color: rgb(255, 196, 205)
+  color: rgb(0, 0, 0)
 }
 .aktualne-dzialanie{
 
@@ -51,12 +50,12 @@ body {
 
 button{
   cursor: pointer;
-  border: 1px solid rgb(133, 43, 58);
+  border: 1px solid rgb(43, 133, 48);
   box-shadow: 0px 4px 25px -10px rgba(0, 0, 0, 0.75);
-  background-color: rgb(194, 100, 128);
+  background-color: rgb(59, 166, 52);
   outline: none;
 }
 
-.coll2{
+.coll2 {
   grid-column: span 2;
 }

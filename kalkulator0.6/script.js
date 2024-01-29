@@ -37,11 +37,39 @@ operators.forEach(operator => {
 calculate.addEventListener('click', () => {
   const currentNumber = Number(currentValue.textContent)
   const pastNumber = Number(pastValue.textContent)
-  const result = currentNumber + pastNumber
-  currentValue.textContent = result
+  
   pastValue.textContent = ""
-});
+  switch(currentOperator){
+    case "+":
+      result = pastNumber + currentNumber;
+      pastValue.textContent = ""
+      currentValue.textContent = result
+      break;
+    case "-":
+      
+      result = pastNumber - currentNumber;
+      pastValue.textContent = ""
+      currentValue.textContent = result
+      break;
+    case "*":
+      
+      result = pastNumber * currentNumber;
+      pastValue.textContent = ""
+      currentValue.textContent = result
+      break;
+    case "÷":
+      result = pastNumber / currentNumber;
+      pastValue.textContent = ""
+      currentValue.textContent = result
+      break;   
+  }
 
+
+
+
+
+
+});
 
 
 
