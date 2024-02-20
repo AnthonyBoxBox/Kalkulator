@@ -13,4 +13,5 @@ Kalkulator0.5:
 Zmiana koloru, wprowadzenie funckji dodawania i odejmowania. 
 Kalkulator0.6:
 Wprowadzenie funkcji dzielenia i mnożenia.
-
+20.02.2024:
+Wykonano pierwszy test aplikacji metodą menualną, każda funckja działa jak powinna i nie ma żadnych zastrzeżeń. 
