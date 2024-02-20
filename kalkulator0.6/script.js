@@ -16,6 +16,8 @@ numbers.forEach(number => {
 clearButton.addEventListener('click', () => {
     const currentValue = document.querySelector('.aktualne-dzialanie');
     currentValue.textContent = '';
+    currentOperator = undefined; 
+    pastValue.textContent = '';
   });
 
 delButton.addEventListener('click', ()=>{
