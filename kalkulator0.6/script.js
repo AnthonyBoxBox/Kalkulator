@@ -1,4 +1,5 @@
 const numbers = document.querySelectorAll('.cyfra');
+const decimal = document.querySelectorAll('.decimal')
 const currentValue = document.querySelector('.aktualne-dzialanie');
 const clearButton = document.querySelector('.wyczys');
 const delButton = document.querySelector('.usun')
@@ -67,8 +68,17 @@ calculate.addEventListener('click', () => {
   }
 
 
+  function containsDecimalPoint(value) {
+    return value.includes('.');
+  }
 
-
+  document.body.addEventListener('click', (event) => {
+    if (event.target.matches('.decimal')) {
+      if (!containsDecimalPoint(currentValue.textContent)) {
+        currentValue.textContent += '.';
+      }
+    }
+  });
 
 
 });
