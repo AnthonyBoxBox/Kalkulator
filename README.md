@@ -15,3 +15,5 @@ Kalkulator0.6:
 Wprowadzenie funkcji dzielenia i mnożenia.
 20.02.2024:
 Wykonano pierwszy test aplikacji metodą menualną, każda funckja działa jak powinna i nie ma żadnych zastrzeżeń. 
+01.03.2024:
+Dodano funckję umożliwiającą robienie działań po przecinku, również dodano funckję które blokuje wpisywanie więcej niż 1 kropki
