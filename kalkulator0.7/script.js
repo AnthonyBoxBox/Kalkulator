@@ -1,9 +1,9 @@
 const numbers = document.querySelectorAll('.cyfra');
 const decimal = document.querySelectorAll('.decimal')
-const currentValue = document.querySelector('.aktualne-dzialanie');
+const currentValue = document.querySelector('.currentValue-result');
 const clearButton = document.querySelector('.wyczys');
 const delButton = document.querySelector('.usun')
-const pastValue = document.querySelector('.poprzednie-dzialanie')
+const pastValue = document.querySelector('.pastValue-result')
 const operators = document.querySelectorAll('.operator')
 const calculate = document.querySelector('.rownosc')
 let currentOperator = undefined
@@ -15,14 +15,14 @@ numbers.forEach(number => {
   });
 });
 clearButton.addEventListener('click', () => {
-    const currentValue = document.querySelector('.aktualne-dzialanie');
+    const currentValue = document.querySelector('.currentValue-result');
     currentValue.textContent = '';
     currentOperator = undefined; 
     pastValue.textContent = '';
   });
 
 delButton.addEventListener('click', ()=>{
-    const currentValue = document.querySelector('.aktualne-dzialanie');
+    const currentValue = document.querySelector('.currentValue-result');
     const currentValueLength = currentValue.textContent.length;
 
     if (currentValueLength > 0) {
@@ -54,6 +54,7 @@ calculate.addEventListener('click', () => {
       pastValue.textContent = ""
       currentValue.textContent = result
       break;
+    
     case "*":
       
       result = pastNumber * currentNumber;
@@ -61,10 +62,40 @@ calculate.addEventListener('click', () => {
       currentValue.textContent = result
       break;
     case "÷":
+      
+    
+      If(currentNumber===0) 
+      {
+        clearButton()
+        return
+      }
       result = pastNumber / currentNumber;
       pastValue.textContent = ""
       currentValue.textContent = result
+      
       break;   
+      
+    case '^':
+      result = Math.pow(pastValue, currentValue)
+      pastValue.textContent = ""
+      currentValue.textContent = result
+      break
+    case '%':
+      result = pastValue / 100 * currentValue
+      pastValue.textContent = ""
+      currentValue.textContent = result
+      break
+    case '√':
+      result = Math.pow(pastValue, 1 / currentValue)
+      pastValue.textContent = ""
+      currentValue.textContent = result
+      break
+    case 'log':
+      result = Math.log(pastValue) / Math.log(currentValue)
+      pastValue.textContent = ""
+      currentValue.textContent = result
+      break
+  
   }
 
 
