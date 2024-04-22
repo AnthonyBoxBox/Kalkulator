@@ -64,15 +64,14 @@ calculate.addEventListener('click', () => {
     case "÷":
       
       
-      If(currentNumber===0) 
-      {
-        clearButton()
-        return
-      } 
+      if(currentNumber===0) {
+        
+        currentNumber == 0;
+      } else {
       result = pastNumber / currentNumber;
       pastValue.textContent = ""
       currentValue.textContent = result
-      
+      }
       break;   
      
     case '^':
